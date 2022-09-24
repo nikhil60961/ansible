@@ -51,7 +51,7 @@
     - name: Example using login_unix_socket to connect to server
       community.mysql.mysql_user:
        name: root
-       password: "{{mysql_root_password}}"
+       password: admin@123
        login_unix_socket: /var/run/mysqld/mysqld.sock
 
     - name: Create database user with password and all database privilege
