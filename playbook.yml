@@ -49,7 +49,7 @@
   # MySQL Configuration
     - name: Sets the root password
       mysql_user:
-        name: root
+        name: db
         password: "{{ mysql_root_password }}"
         login_unix_socket: /var/run/mysqld/mysqld.sock
 
@@ -58,14 +58,14 @@
         name: ''
         host_all: yes
         state: absent
-        login_user: root
+        login_user: db
         login_password: "{{ mysql_root_password }}"
 
     - name: Removes the MySQL test database
       mysql_db:
         name: test
         state: absent
-        login_user: root
+        login_user: db
         login_password: "{{ mysql_root_password }}"
 
   # UFW Configuration
