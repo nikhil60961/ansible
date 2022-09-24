@@ -1,6 +1,6 @@
 ---
 mysql_root_password: "admin@123"
-app_user: "admin"
+app_user: "root"
 http_host: "your_domain"
 http_conf: "your_domain.conf"
 http_port: "80"
