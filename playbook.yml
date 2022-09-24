@@ -12,6 +12,7 @@
     - name: update apt list
       apt:
        update_cache: yes
+       become: yes
 
     - name: Install prerequisites
       apt: name={{ item }} update_cache=yes state=latest force_apt_get=yes
