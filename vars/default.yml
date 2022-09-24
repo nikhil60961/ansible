@@ -1,5 +1,5 @@
 ---
-mysql_root_password: "admin"
+mysql_root_password: "admin@123"
 app_user: "root"
 http_host: "your_domain"
 http_conf: "your_domain.conf"
