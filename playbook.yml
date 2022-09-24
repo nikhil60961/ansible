@@ -47,7 +47,7 @@
       notify: Reload Apache
 
   # MySQL Configuration
-    - name: Create database user with password and all database privileges
+    - name: Create database user with password and all database privilege
       community.mysql.mysql_user:
        name: bob
        password: "{{mysql_root_password}}"
