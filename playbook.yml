@@ -8,9 +8,9 @@
   
 
   tasks:
-    - name: Updates apt cache
-      action: apt update_cache=true
-
+    - name: update apt list
+      apt:
+       update_cache: yes
 
     - name: Install prerequisites
       apt: name={{ item }} update_cache=yes state=latest force_apt_get=yes
