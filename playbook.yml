@@ -3,11 +3,16 @@
 ##################################################
 ---
 - hosts: all
-  become: true
+  sudo: yes
   vars_files:
     - vars/default.yml
+  
 
   tasks:
+    - name: Updates apt cache
+      action: apt update_cache=true
+
+
     - name: Install prerequisites
       apt: name={{ item }} update_cache=yes state=latest force_apt_get=yes
       loop: [ 'aptitude' ]
